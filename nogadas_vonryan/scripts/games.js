@@ -11,7 +11,6 @@ const endpoint = 'http://localhost/test/exercise16.php';
 async function getGames() {
     const response = await fetch(endpoint);
     const data = await response.json();
-    console.log(data);
 
     container.innerHTML = '';
 
@@ -51,7 +50,6 @@ async function insertGame() {
 
     const response = await fetch(endpoint, options);
     const data = await response.text();
-    console.log(data);
 
     getGames();
 }
@@ -72,7 +70,6 @@ async function updateGame() {
 
     const response = await fetch(endpoint, options);
     const data = await response.text();
-    console.log(data);
 
     getGames();
 }
@@ -88,7 +85,6 @@ async function deleteGame(id) {
    
     const response = await fetch(endpoint, options);
     const data = await response.text();
-    console.log(data);
 
     getGames();
 }
