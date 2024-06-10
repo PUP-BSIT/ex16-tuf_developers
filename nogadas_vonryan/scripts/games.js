@@ -29,3 +29,23 @@ async function getGames() {
         container.append(row);
     }
 }
+
+async function insertGame() {
+    const options = {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/x-www-form-urlencoded",
+        },
+        body: `title=${inputTitle.value}&\
+            description=${inputDescription.value}&\
+            genre=${inputGenre.value}&\
+            developer=${inputDeveloper.value}&\
+            release_date=${inputDate.value}`
+    };
+
+    const response = await fetch(endpoint, options);
+    const data = await response.text();
+    console.log(data);
+
+    getGames();
+}
