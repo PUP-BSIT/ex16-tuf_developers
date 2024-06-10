@@ -17,6 +17,7 @@ async function getGames() {
 
     for(item of data) {
         const row = document.createElement('tr');
+        const editButton = getEditButton(item);
 
         row.innerHTML = `
             <td>${item.id}</td>
@@ -26,6 +27,7 @@ async function getGames() {
             <td>${item.developer}</td>
             <td>${item.release_date}</td>`;
 
+        row.append(editButton);
         container.append(row);
     }
 }
@@ -85,4 +87,26 @@ async function deleteGame(id) {
     console.log(data);
 
     getGames();
+}
+
+function getEditButton(item) {
+    const cell = document.createElement('td');
+    const button = document.createElement('button');
+    
+    button.addEventListener('click', setInputs.bind(null, item.id, item.title,
+        item.description, item.genre, item.developer, item.release_date));
+
+    button.textContent = 'Edit';
+    cell.append(button);
+        
+    return cell;
+}
+
+function setInputs(id, title, description, genre, developer, release_date) {
+    inputId.value = id ?? '';
+    inputTitle.value = title ?? '';
+    inputDescription.value = description ?? '';
+    inputGenre.value = genre ?? '';
+    inputDeveloper.value = developer ?? '';
+    inputDate.value = release_date ?? '';
 }
