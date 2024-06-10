@@ -70,3 +70,19 @@ async function updateGame() {
 
     getGames();
 }
+
+async function deleteGame(id) {
+    const options = {
+        method: 'DELETE',
+        headers: {
+            "Content-type": "application/x-www-form-urlencoded",
+        },
+        body: `id=${id}`
+    };
+   
+    const response = await fetch(endpoint, options);
+    const data = await response.text();
+    console.log(data);
+
+    getGames();
+}
