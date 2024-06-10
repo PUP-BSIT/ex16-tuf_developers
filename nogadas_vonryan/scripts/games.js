@@ -6,7 +6,7 @@ const inputGenre = document.querySelector('#genre');
 const inputDeveloper = document.querySelector('#developer');
 const inputDate = document.querySelector('#release_date');
 
-const endpoint = '';
+const endpoint = 'http://localhost/test/exercise16.php';
 
 async function getGames() {
     const response = await fetch(endpoint);
