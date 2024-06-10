@@ -18,6 +18,7 @@ async function getGames() {
     for(item of data) {
         const row = document.createElement('tr');
         const editButton = getEditButton(item);
+        const deleteButton = getDeleteButton(item);
 
         row.innerHTML = `
             <td>${item.id}</td>
@@ -28,6 +29,7 @@ async function getGames() {
             <td>${item.release_date}</td>`;
 
         row.append(editButton);
+        row.append(deleteButton);
         container.append(row);
     }
 }
