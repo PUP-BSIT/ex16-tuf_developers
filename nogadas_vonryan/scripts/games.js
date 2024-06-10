@@ -32,6 +32,8 @@ async function getGames() {
         row.append(deleteButton);
         container.append(row);
     }
+
+    setInputs();
 }
 
 async function insertGame() {
