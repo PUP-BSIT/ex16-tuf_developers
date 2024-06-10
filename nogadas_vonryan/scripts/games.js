@@ -49,3 +49,24 @@ async function insertGame() {
 
     getGames();
 }
+
+async function updateGame() {
+    const options = {
+        method: 'PATCH',
+        headers: {
+            "Content-type": "application/x-www-form-urlencoded",
+        },
+        body: `id=${inputId.value}&\
+            title=${inputTitle.value}&\
+            description=${inputDescription.value}&\
+            genre=${inputGenre.value}&\
+            developer=${inputDeveloper.value}&\
+            release_date=${inputDate.value}`
+    };
+
+    const response = await fetch(endpoint, options);
+    const data = await response.text();
+    console.log(data);
+
+    getGames();
+}
