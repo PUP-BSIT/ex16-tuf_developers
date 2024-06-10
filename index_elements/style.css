@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #221815;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  animation: fadeIn 10s forwards;
+  height: 100vh;
+}
+
+img {
+  width: 10rem;
+  height: 13rem;
+}
+
+h1 {
+  color: #fbc649;
+  font-size: 5rem;
+}
+
+p {
+  font-size: 3rem;
+  color: #eeae25;
+}
+
+a {
+  color: #fbc649;
+  font-size: 2.5rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 426px) {
+  img {
+    width: 7rem;
+    height: 9rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+
+  .reference-container {
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  a {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 926px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+
+  img {
+    width: 8rem;
+    height: 10rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  P {
+    font-size: 2rem;
+  }
+
+  a {
+    font-size: 1.6rem;
+  }
+}
