@@ -123,3 +123,5 @@ function setInputs(id, title, description, genre, developer, release_date) {
     inputDeveloper.value = developer ?? '';
     inputDate.value = release_date ?? '';
 }
+
+getGames();
