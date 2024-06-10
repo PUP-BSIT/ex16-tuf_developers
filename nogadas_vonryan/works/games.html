@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"/>
+    <title>CRUD: Games</title>
+  </head>
+  <body>
+    <h1>CRUD</h1>
+    <form id="form-container">
+      <input id="game_id" type="text" placeholder="id" disabled/>
+      <input id="title" type="text" placeholder="title"/>
+      <textarea id="description" placeholder="description"></textarea>
+      <input id="genre" type="text" placeholder="genre"/>
+      <input id="developer" type="text" placeholder="developer"/>
+      <input id="release_date" type="text" placeholder="release date"/>
+      <button type="button">Insert</button>
+      <button type="button">Update</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Genre</th>
+                <th>Developer</th>
+                <th>Release Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="container"></tbody>
+    </table>
+  </body>
+</html>
