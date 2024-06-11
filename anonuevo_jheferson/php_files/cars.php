@@ -2,7 +2,7 @@
 $server = 'localhost';
 $username = 'root';
 $password = '';
-$db = 'dtb_cars';
+$db = 'u423230023_exercise_16';
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
