@@ -53,3 +53,23 @@ async function insertMovie() {
 
   getMovie();
 }
+
+async function updateMovie() {
+  const options = {
+      method: 'PATCH',
+      headers: {
+          "Content-type": "application/x-www-form-urlencoded",
+      },
+      body: `id=${inputId.value}&\
+          title=${inputTitle.value}&\
+          movie_description=${inputMovieDescription.value}&\
+          genre=${inputGenre.value}&\
+          director=${inputDirector.value}&\
+          release_date=${inputReleaseDate.value}`
+  };
+
+  const response = await fetch(endpoint, options);
+  const data = await response.text();
+
+  getMovie();
+}
