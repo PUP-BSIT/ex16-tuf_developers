@@ -99,3 +99,17 @@ function getDeleteButton(item) {
   cell.append(button);
   return cell;
 }
+
+function getEditButton(item) {
+  const cell = document.createElement('td');
+  const button = document.createElement('button');
+
+  button.addEventListener('click', setInputs.bind(null, item.id, 
+    item.title, item.movie_description, item.genre, item.director,
+    item.release_date));
+
+  button.textContent = 'Edit';
+  cell.append(button);
+
+  return cell;
+}
