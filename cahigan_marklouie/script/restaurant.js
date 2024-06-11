@@ -115,13 +115,13 @@ function getEditButton(item) {
     return cell;
 }
 
-function setInputs(id, restaurant_name, location, favorite_food, operating_hours, contact_info) {
+function setInputs(id, name, location, favorite, operating_hours, contact) {
     inputId.value = id ?? '';
-    inputRestaurantName.value = restaurant_name ?? '';
+    inputRestaurantName.value = name ?? '';
     inputLocation.value = location ?? '';
-    inputFavoriteFood.value = favorite_food ?? '';
+    inputFavoriteFood.value = favorite ?? '';
     inputOperatingHours.value = operating_hours ?? '';
-    inputContactInfo.value = contact_info ?? '';
+    inputContactInfo.value = contact ?? '';
 }
 
 getRestaurant();
