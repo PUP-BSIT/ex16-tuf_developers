@@ -9,3 +9,28 @@ body {
   margin: 1%;
   padding: 0px;
 }
+
+form {
+  color: #fe17c1;
+  background-color: #fe17c1;
+  text-shadow: 2px 1px 1px #000000, 0 0 5px #f0ea93;
+  box-shadow: 0 3px 3px yellow;
+  padding: 20px;
+  border: 1px solid #ffea30;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #fe17c1;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: black 1px 1px 0;
+  text-align: center;
+}
