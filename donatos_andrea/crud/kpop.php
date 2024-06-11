@@ -1,13 +1,8 @@
 <?php
 $server = 'localhost';
-$username = 'u423230023_jhef_anon_01';
-$password = 'JHEFtufhostinger1234';
-$db = 'u423230023_exercise_16';
-
-$server = 'localhost';
-$username = 'root';
-$password = '';
-$db = 'dtb_kpop';
+$username = $_ENV['username'];
+$password = $_ENV['password'];
+$db = 'kpop';
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
@@ -25,7 +20,7 @@ if (!$conn) {
     while ($row = $result->fetch_assoc()) {
         array_push($response, [
             'id' => $row['id'],
-            'group' => $row['group'], // corrected column name
+            'group' => $row['group'],
             'song' => $row['song'],
             'bias' => $row['bias'],
             'debut' => $row['debut'],
@@ -59,7 +54,8 @@ if (!$conn) {
     $debut = $_PATCH['debut'] ?? '';
     $company = $_PATCH['company'] ?? '';
 
-    $sql = "UPDATE kpop SET `group`='{$group}', `song`='{$song}', `bias`='{$bias}', 
+    $sql = "UPDATE kpop SET `group`='{$group}', `song`='{$song}', 
+        `bias`='{$bias}', 
         `debut`='{$debut}', `company`='{$company}' WHERE id='{$id}'";
 
     if (!mysqli_query($conn, $sql)) {
