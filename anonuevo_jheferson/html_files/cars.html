@@ -3,40 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="">
   <title>CRUD: Cars</title>
 </head>
 <body>
-  <div>
-    <h1>CRUD: Cars</h1>
-    <div>
-      <form>
-        <input id="car_id" type="text" placeholder="id" disabled/>
-        <input id="car_brand" type="text" placeholder="Car Brand"/>
-        <input id="car_model" type="text" placeholder="Car Model"/>
-        <input id="car_year" type="text" placeholder="Car Year"/>
-        <input id="car_color" type="text" placeholder="Car Color"/>
-        <input id="no_of_seats" type="text" placeholder="Number of Seats"/>
-        <button type="button">Insert</button>
-        <button type="button">Update</button>
-      </form>
-    </div>
-  </div>
-  <div>
-    <table>
-      <tableheader>
-          <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Genre</th>
-              <th>Developer</th>
-              <th>Release Date</th>
-              <th>Edit</th>
-              <th>Delete</th>
-          </tr>
-      </tableheader>
+  <h1>CRUD</h1>
+  <form id="form-container">
+    <input id="car_id" type="text" placeholder="id" disabled/>
+    <input id="car_brand" type="text" placeholder="Car Brand"/>
+    <input id="car_model" type="text" placeholder="Car Model"/>
+    <input id="car_year" type="text" placeholder="Car Year"/>
+    <input id="car_color" type="text" placeholder="Car Color"/>
+    <input id="no_of_seats" type="text" placeholder="Number of Seats"/>
+    <button type="button" onclick="insertCar()">Insert</button>
+    <button type="button" onclick="updateCar()">Update</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>Seats</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="container"></tbody>
   </table>
-  </div>
-  <script src=""></script>
+  <script src="../scripts/cars.js"></script>
 </body>
 </html>
