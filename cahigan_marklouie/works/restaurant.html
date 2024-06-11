@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="../styles/restaurant.css">
+    <title>CRUD: Favorite Restaurant</title>
+  </head>
+  <body>
+    <h1>CRUD: Favorite Restaurant</h1>    
+    <form id="form-container">
+        <input id="restaurant_id" type="text" placeholder="id" disabled/>
+        <input id="restaurant_name" type="text" placeholder="restaurant name"/>
+        <textarea id="location" placeholder="location"></textarea>
+        <input id="favorite_food" type="text" placeholder="favorite food"/>
+        <input id="operating_hours" type="text" placeholder="operating hours"/>
+        <input id="contact_info" type="text" placeholder="contact info"/>
+        <button type="button" onclick="insertRestaurant()">Insert</button>
+        <button type="button" onclick="updateRestaurant()">Update</button>
+      </form>
+      <table>
+        <thead>
+            <tr> 
+                <th>ID</th>
+                <th>Restaurant Name</th>
+                <th>Location</th>
+                <th>Favorite Food</th>
+                <th>Operating Hours</th>
+                <th>Contact Info</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="container"></tbody> 
+    </table>
+    <script src="../script/restaurant.js"></script>
+  </body>
+</html>
