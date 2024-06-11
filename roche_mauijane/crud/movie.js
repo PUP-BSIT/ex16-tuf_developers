@@ -113,3 +113,15 @@ function getEditButton(item) {
 
   return cell;
 }
+
+function setInputs(id, title, movie_description, genre,
+  director, release_date) {
+   inputId.value = id ?? '';
+   inputTitle.value = title ?? '';
+   inputMovieDescription.value = movie_description ?? '';
+   inputGenre.value = genre ?? '';
+   inputDirector.value = director ?? '';
+   inputReleaseDate.value = release_date ?? '';
+}
+
+getMovie();
