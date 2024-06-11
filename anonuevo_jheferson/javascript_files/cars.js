@@ -46,3 +46,18 @@ async function updateCar() {
 
   getCars();
 }
+
+async function deleteCar(id) {
+  const options = {
+      method: 'DELETE',
+      headers: {
+          "Content-type": "application/x-www-form-urlencoded",
+      },
+      body: `id=${id}`
+  };
+
+  const response = await fetch(endpoint, options);
+  const data = await response.text();
+
+  getCars();
+}
