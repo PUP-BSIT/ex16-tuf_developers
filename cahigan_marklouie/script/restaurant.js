@@ -6,7 +6,7 @@ const inputFavoriteFood = document.querySelector('#favorite_food');
 const inputOperatingHours = document.querySelector('#operating_hours');
 const inputContactInfo = document.querySelector('#contact_info');
 
-const endpoint = 'http://localhost/test/exercise16.php';
+const endpoint = 'https://iraya.site/api/restaurant.php';
 
 async function getRestaurant() {
     const response = await fetch(endpoint);
