@@ -6,7 +6,7 @@ const inputYear = document.querySelector("#car_year");
 const inputColor = document.querySelector("#car_color");
 const inputSeats = document.querySelector("#no_of_seats");
 
-const endpoint = "http://localhost/test/cars.php";
+const endpoint = "https://iraya.site/api/cars.php";
 
 async function getCars() {
   const response = await fetch(endpoint);
