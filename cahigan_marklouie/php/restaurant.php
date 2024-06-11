@@ -38,9 +38,11 @@ else if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $operating_hours = $_POST['operating_hours'] ?? '';
     $contact_info = $_POST['contact_info'] ?? '';
 
-    $sql = "INSERT INTO restaurant(restaurant_name,location,favorite_food,operating_hours,contact_info) 
-        VALUES('{$restaurant_name}', '{$location}', '{$favorite_food}', '{$operating_hours}', 
-        '{$contact_info}')";
+    $sql = "INSERT INTO restaurant(restaurant_name,location,
+        favorite_food,operating_hours,contact_info) 
+        VALUES('{$restaurant_name}', '{$location}', '{$favorite_food}', 
+            '{$operating_hours}', 
+            '{$contact_info}')";
 
     if(!mysqli_query($conn, $sql)) {
         die(mysqli_error($conn));
@@ -58,7 +60,8 @@ else if ($_SERVER['REQUEST_METHOD'] == 'PATCH') {
     $operating_hours = $_PATCH['operating_hours'] ?? '';
     $contact_info = $_PATCH['contact_info'] ?? '';
 
-    $sql = "UPDATE restaurant SET restaurant_name='{$restaurant_name}', location='{$location}', 
+    $sql = "UPDATE restaurant SET restaurant_name='{$restaurant_name}', 
+        location='{$location}', 
         favorite_food='{$favorite_food}', operating_hours='{$operating_hours}', 
         contact_info='{$contact_info}' WHERE id='{$id}'";
 
