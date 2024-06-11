@@ -1,8 +1,8 @@
 <?php
 $server = 'localhost';
-$username = 'root';
-$password = '';
-$db = 'u423230023_exercise_16';
+$username = $_ENV['username'];
+$password = $_ENV['password'];
+$db = 'cars';
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
