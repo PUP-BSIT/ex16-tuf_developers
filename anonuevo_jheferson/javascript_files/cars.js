@@ -113,3 +113,14 @@ function getEditButton(item) {
 
   return cell;
 }
+
+function setInputs(id, brand, model, year, color, seats) {
+  inputId.value = id ?? '';
+  inputBrand.value = brand ?? '';
+  inputModel.value = model ?? '';
+  inputYear.value = year ?? '';
+  inputColor.value = color ?? '';
+  inputSeats.value = seats ?? '';
+}
+
+getCars();
