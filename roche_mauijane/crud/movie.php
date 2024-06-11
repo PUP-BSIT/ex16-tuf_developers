@@ -1,8 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Methods: GET, POST, DELETE, PATCH, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
-
 $server = 'localhost';
 $username = 'u423230023_jhef_anon_01';
 $password = 'JHEFtufhostinger1234';
