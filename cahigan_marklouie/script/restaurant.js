@@ -34,3 +34,22 @@ async function getRestaurant() {
 
     setInputs();
 }
+
+async function insertRestaurant() {  
+    const options = {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/x-www-form-urlencoded",
+        },
+        body: `restaurant_name=${inputRestaurantName.value}&\
+            location=${inputLocation.value}&\
+            favorite_food=${inputFavoriteFood.value}&\
+            operating_hours=${inputOperatingHours.value}&\
+            contact_info=${inputContactInfo.value}`
+    };
+
+    const response = await fetch(endpoint, options);
+    const data = await response.text();
+
+    getRestaurant();
+}
