@@ -34,3 +34,22 @@ async function getMovie() {
 
   setInputs();
 }
+
+async function insertMovie() {
+  const options = {
+      method: 'POST',
+      headers: {
+          "Content-type": "application/x-www-form-urlencoded",
+      },
+      body: `title=${inputTitle.value}&\
+          movie_description=${inputMovieDescription.value}&\
+          genre=${inputGenre.value}&\
+          director=${inputDirector.value}&\
+          release_date=${inputReleaseDate.value}`
+  };
+
+  const response = await fetch(endpoint, options);
+  const data = await response.text();
+
+  getMovie();
+}
