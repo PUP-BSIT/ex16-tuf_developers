@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheet_files/cars.css">
+  <title>CRUD: Cars</title>
+</head>
+<body>
+  <h1>CRUD: Cars</h1>
+  <form>
+    <input id="car_id" type="text" placeholder="id" disabled/>
+    <input id="car_brand" type="text" placeholder="Car Brand"/>
+    <input id="car_model" type="text" placeholder="Car Model"/>
+    <input id="car_year" type="text" placeholder="Car Year"/>
+    <input id="car_color" type="text" placeholder="Car Color"/>
+    <input id="no_of_seats" type="text" placeholder="Number of Seats"/>
+    <button type="button" onclick="insertCar()">Insert</button>
+    <button type="button" onclick="updateCar()">Update</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>Seats</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="container"></tbody>
+  </table>
+  <script src="../javascript_files/cars.js"></script>
+</body>
+</html>
