@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./kpop.css" />
+    <title>CRUD: Kpop</title>
+  </head>
+  <body>
+    <h1>CRUD: Kpop</h1>
+    <form>
+      <input id="kpop_id" type="text" placeholder="id" disabled />
+      <input id="group" type="text" placeholder="group" />
+      <input id="song" type="text" placeholder="song" />
+      <input id="bias" type="text" placeholder="bias" />
+      <input id="debut" type="date" placeholder="debut" />
+      <input id="company" type="text" placeholder="company" />
+      <button type="button" onclick="insertKpop()">Insert</button>
+      <button type="button" onclick="updateKpop()">Update</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>group</th>
+          <th>song</th>
+          <th>bias</th>
+          <th>debut</th>
+          <th>company</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="container"></tbody>
+    </table>
+    <script src="./kpop.js"></script>
+  </body>
+</html>

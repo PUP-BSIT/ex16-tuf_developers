@@ -1,7 +1,8 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Methods: GET, POST, DELETE, PATCH, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
+$server = 'localhost';
+$username = 'u423230023_jhef_anon_01';
+$password = 'JHEFtufhostinger1234';
+$db = 'u423230023_exercise_16';
 
 $server = 'localhost';
 $username = 'root';
@@ -24,7 +25,7 @@ if (!$conn) {
     while ($row = $result->fetch_assoc()) {
         array_push($response, [
             'id' => $row['id'],
-            'group' => $row['group'],
+            'group' => $row['group'], // corrected column name
             'song' => $row['song'],
             'bias' => $row['bias'],
             'debut' => $row['debut'],
@@ -40,7 +41,7 @@ if (!$conn) {
     $debut = $_POST['debut'] ?? '';
     $company = $_POST['company'] ?? '';
 
-    $sql = "INSERT INTO cars(group, song, bias, debut, company) 
+    $sql = "INSERT INTO kpop (`group`, `song`, `bias`, `debut`, `company`) 
         VALUES('{$group}', '{$song}', '{$bias}', '{$debut}', '{$company}')";
 
     if (!mysqli_query($conn, $sql)) {
@@ -58,8 +59,8 @@ if (!$conn) {
     $debut = $_PATCH['debut'] ?? '';
     $company = $_PATCH['company'] ?? '';
 
-    $sql = "UPDATE cars SET group='{$group}', song='{$song}', bias='{$bias}', 
-        debut='{$debut}', company='{$company}' WHERE id='{$id}'";
+    $sql = "UPDATE kpop SET `group`='{$group}', `song`='{$song}', `bias`='{$bias}', 
+        `debut`='{$debut}', `company`='{$company}' WHERE id='{$id}'";
 
     if (!mysqli_query($conn, $sql)) {
         die(mysqli_error($conn));
@@ -71,7 +72,7 @@ if (!$conn) {
 
     $id = $_DELETE['id'] ?? '';
 
-    $sql = "DELETE FROM cars WHERE id='{$id}'";
+    $sql = "DELETE FROM kpop WHERE id='{$id}'";
 
     if (!mysqli_query($conn, $sql)) {
         die(mysqli_error($conn));

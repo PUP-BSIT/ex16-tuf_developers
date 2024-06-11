@@ -6,7 +6,7 @@ const inputBias = document.querySelector('#bias');
 const inputDebut = document.querySelector('#debut');
 const inputCompany = document.querySelector('#company');
 
-const endpoint = 'http://localhost/test/kpop.php';
+const endpoint = 'https://iraya.site/api/kpop.php';
 
 async function getKpop() {
     const response = await fetch(endpoint);
@@ -33,7 +33,6 @@ async function getKpop() {
     }
 
     setInputs();
-    console.log(data);
 }
 
 async function insertKpop() {
@@ -94,7 +93,7 @@ function getDeleteButton(item) {
     const cell = document.createElement('td');
     const button = document.createElement('button');
 
-    button.addEventListener('click', deleteCar.bind(null, item.id));
+    button.addEventListener('click', deleteKpop.bind(null, item.id));
 
     button.textContent = 'Delete';
     cell.append(button);
@@ -115,12 +114,12 @@ function getEditButton(item) {
     return cell;
 }
 
-function setInputs(id, group, song, bias, color, company) {
+function setInputs(id, group, song, bias, debut, company) {
     inputId.value = id ?? '';
     inputGroup.value = group ?? '';
     inputSong.value = song ?? '';
-    inputBias.value = bias ?? '';
-    inputDebut.value = color ?? '';
+    inputBias.value =  bias ?? '';
+    inputDebut.value = debut ?? '';
     inputCompany.value = company ?? '';
 }
 
