@@ -72,3 +72,17 @@ function getDeleteButton(item) {
   cell.append(button);
   return cell;
 }
+
+function getEditButton(item) {
+  const cell = document.createElement('td');
+  const button = document.createElement('button');
+
+  button.addEventListener('click', setInputs.bind(null, item.id, 
+    item.car_brand, item.car_model, item.car_year, item.car_color,
+    item.no_of_seats));
+
+  button.textContent = 'Edit';
+  cell.append(button);
+
+  return cell;
+}
