@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRUD</title>
+    <title>Crud</title>
+    <link rel="stylesheet" href="./movies.css" />
   </head>
   <body>
+    <div class="heading">
+      <h1>MOVIES</h1>
+    </div>
+    <section class="main-container">
     <form>
       <input id="movie_id" type="text" placeholder="id" disabled />
       <input id="title" type="text" placeholder="title" />
@@ -15,8 +20,9 @@
       <input id="director" type="text" placeholder="director" />
       <input id="cast" type="text" placeholder="cast" />
       <input id="release_date" type="text" placeholder="release_date" />
-      <button type="button">Insert</button>
-      <button type="button">Update</button>
+      <button type="button" onclick="Insert()">Insert</button>
+      <button type="button" onclick="Update()">Update</button>
     </form>
+  </section>
   </body>
 </html>

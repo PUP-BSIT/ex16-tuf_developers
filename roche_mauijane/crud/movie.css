@@ -1,0 +1,20 @@
+/* body {
+  font-family: "Gill Sans", "sans-serif";
+  background-color: #adbada;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: initial;
+}
+
+.heading {
+  margin-bottom: 10px;
+  color: #fe17c1;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: black 1px 1px 0;
+  text-align: center;
+}
+*/
+
+.main-container {
+  align-items: center;
+}
