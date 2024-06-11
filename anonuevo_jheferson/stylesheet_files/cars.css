@@ -104,3 +104,86 @@ tbody tr:hover {
 .delete-button:hover {
   background-color: #d40000;
 }
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  thead tr {
+    display: none;
+  }
+  
+  tr {
+    margin-bottom: 10px;
+  }
+  
+  td {
+    text-align: center; 
+    padding-left: 0;
+    position: relative;
+  }
+  
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 50%;    
+    left: 10px;
+    transform: translateY(-50%);
+    width: calc(50% - 20px);
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 460px) {
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  table {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  table {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  td {
+    text-align: center;
+    padding-left: 0;
+    position: relative;
+  }
+  
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 50%; 
+    left: 10px;
+    transform: translateY(-50%);
+    width: calc(50% - 20px);
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+}
