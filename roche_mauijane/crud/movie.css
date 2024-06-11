@@ -50,3 +50,26 @@ input[type="text"]:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(255, 234, 48, 0.8);
 }
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fe17c1;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: rgb(98, 48, 86);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  color: yellow;
+}
+
+button:active {
+  background-color: rgb(98, 48, 86);
+  color: yellow; 
+}
