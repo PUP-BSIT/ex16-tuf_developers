@@ -73,3 +73,28 @@ button:active {
   background-color: rgb(98, 48, 86);
   color: yellow; 
 }
+
+table {
+  width: 200%;
+  max-width: 900px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+th, td {
+  border: 1px solid #ffea30;
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background-color: #fe17c1;
+  color: #fff;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f6f6eb;
+}
