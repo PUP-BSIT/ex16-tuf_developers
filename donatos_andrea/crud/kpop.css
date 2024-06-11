@@ -1,0 +1,210 @@
+/* kpop.css */
+
+body {
+  font-family: "Gill Sans", sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #008000; /* green */
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: black 1px 1px 0;
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0f8ea; /* light green */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #008000; /* green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005000; /* darker green */
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #f0f8ea; /* light green */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #008000; /* green */
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.edit-button, .delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #008000; /* green */
+  color: #fff;
+}
+
+.edit-button:hover {
+  background-color: #005000; /* darker green */
+}
+
+.delete-button {
+  background-color: #ff4c4c;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #d40000;
+}
+
+@media (max-width: 768px) {
+  form {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  table {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 5px;
+    margin: 10px auto;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  table {
+    font-size: 12px;
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  th, td {
+    padding: 6px 8px;
+  }
+
+  .edit-button, .delete-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /* Responsive Table */
+  table {
+    overflow-x: auto; /* Enable horizontal scroll */
+    display: block;
+  }
+
+  table thead {
+    display: none; /* Hide table header */
+  }
+
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: auto; /* Full width for table cells */
+  }
+
+  table td {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding-left: 50%; /* Adjust for label alignment */
+    text-align: left;
+  }
+
+  table td:before {
+    position: absolute;
+    left: 6px;
+    width: 45%; /* Adjust label width */
+    padding-right: 10px;
+    white-space: nowrap; /* Prevent label wrapping */
+    content: attr(data-label); /* Show label content */
+    text-align: left;
+  }
+
+  table td:last-child {
+    text-align: left;
+    padding-left: 0; /* Reset padding for last cell */
+  }
+
+  table td:last-child button {
+    margin-top: 10px; /* Adjust button margin */
+  }
+}
