@@ -26,3 +26,23 @@ async function insertCar() {
 
   getCars();
 }
+
+async function updateCar() {
+  const options = {
+      method: 'PATCH',
+      headers: {
+          "Content-type": "application/x-www-form-urlencoded",
+      },
+      body: `id=${inputId.value}&\
+          car_brand=${inputBrand.value}&\
+          car_model=${inputModel.value}&\
+          car_year=${inputYear.value}&\
+          car_color=${inputColor.value}&\
+          no_of_seats=${inputSeats.value}`
+  };
+
+  const response = await fetch(endpoint, options);
+  const data = await response.text();
+
+  getCars();
+}
