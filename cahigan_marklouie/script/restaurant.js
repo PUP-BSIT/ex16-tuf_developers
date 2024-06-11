@@ -99,3 +99,18 @@ function getDeleteButton(item) {
     cell.append(button);
     return cell;
 }
+
+function getEditButton(item) {
+    const cell = document.createElement('td');
+    const button = document.createElement('button');
+    
+    button.addEventListener('click', setInputs.bind(null, 
+            item.id, item.restaurant_name,
+                item.location, item.favorite_food, item.operating_hours, 
+                item.contact_info));
+
+    button.textContent = 'Edit';
+    cell.append(button);
+        
+    return cell;
+}
