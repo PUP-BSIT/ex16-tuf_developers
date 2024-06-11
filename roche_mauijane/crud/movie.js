@@ -88,3 +88,14 @@ async function deleteMovie(id) {
 
   getMovie();
 }
+
+function getDeleteButton(item) {
+  const cell = document.createElement('td');
+  const button = document.createElement('button');
+
+  button.addEventListener('click', deleteMovie.bind(null, item.id));
+
+  button.textContent = 'Delete';
+  cell.append(button);
+  return cell;
+}
