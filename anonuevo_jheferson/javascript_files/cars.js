@@ -8,6 +8,33 @@ const inputSeats = document.querySelector('#no_of_seats');
 
 const endpoint = '';
 
+async function getCars() {
+  const response = await fetch(endpoint);
+  const data = await response.json();
+
+  container.innerHTML = '';
+
+  for (const item of data) {
+      const row = document.createElement('tr');
+      const editButton = getEditButton(item);
+      const deleteButton = getDeleteButton(item);
+
+      row.innerHTML = `
+          <td>${item.id}</td>
+          <td>${item.car_brand}</td>
+          <td>${item.car_model}</td>
+          <td>${item.car_year}</td>
+          <td>${item.car_color}</td>
+          <td>${item.no_of_seats}</td>`;
+
+      row.append(editButton);
+      row.append(deleteButton);
+      container.append(row);
+  }
+
+  setInputs();
+}
+
 async function insertCar() {
   const options = {
       method: 'POST',
