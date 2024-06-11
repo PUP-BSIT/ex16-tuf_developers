@@ -34,3 +34,19 @@ h1 {
   text-shadow: black 1px 1px 0;
   text-align: center;
 }
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ffea30;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: #333;
+}
+
+input[type="text"]:focus {
+  border-color: #ffea30;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 234, 48, 0.8);
+}
