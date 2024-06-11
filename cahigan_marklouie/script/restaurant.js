@@ -53,3 +53,23 @@ async function insertRestaurant() {
 
     getRestaurant();
 }
+
+async function updateRestaurant() {
+    const options = {
+        method: 'PATCH',
+        headers: {
+            "Content-type": "application/x-www-form-urlencoded",
+        },
+        body: `id=${inputId.value}&\
+            restaurant_name=${inputRestaurantName.value}&\
+            location=${inputLocation.value}&\
+            favorite_food=${inputFavoriteFood.value}&\
+            operating_hours=${inputOperatingHours.value}&\
+            contact_info=${inputContactInfo.value}`
+    };
+
+    const response = await fetch(endpoint, options);
+    const data = await response.text();
+
+    getRestaurant();
+}
