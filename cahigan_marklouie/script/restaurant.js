@@ -114,3 +114,14 @@ function getEditButton(item) {
         
     return cell;
 }
+
+function setInputs(id, restaurant_name, location, favorite_food, operating_hours, contact_info) {
+    inputId.value = id ?? '';
+    inputRestaurantName.value = restaurant_name ?? '';
+    inputLocation.value = location ?? '';
+    inputFavoriteFood.value = favorite_food ?? '';
+    inputOperatingHours.value = operating_hours ?? '';
+    inputContactInfo.value = contact_info ?? '';
+}
+
+getRestaurant();
