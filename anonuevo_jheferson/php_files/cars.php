@@ -1,7 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Methods: GET, POST, DELETE, PATCH, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
 $server = 'localhost';
 $username = 'root';
 $password = '';
@@ -39,8 +36,10 @@ if (!$conn) {
     $car_color = $_POST['car_color'] ?? '';
     $no_of_seats = $_POST['no_of_seats'] ?? '';
 
-    $sql = "INSERT INTO cars(car_brand, car_model, car_year, car_color, no_of_seats) 
-        VALUES('{$car_brand}', '{$car_model}', '{$car_year}', '{$car_color}', '{$no_of_seats}')";
+    $sql = "INSERT INTO cars(car_brand, car_model, car_year, 
+        car_color, no_of_seats) 
+        VALUES('{$car_brand}', '{$car_model}', '{$car_year}', '{$car_color}', 
+        '{$no_of_seats}')";
 
     if (!mysqli_query($conn, $sql)) {
         die(mysqli_error($conn));
@@ -57,8 +56,10 @@ if (!$conn) {
     $car_color = $_PATCH['car_color'] ?? '';
     $no_of_seats = $_PATCH['no_of_seats'] ?? '';
 
-    $sql = "UPDATE cars SET car_brand='{$car_brand}', car_model='{$car_model}', car_year='{$car_year}', 
-        car_color='{$car_color}', no_of_seats='{$no_of_seats}' WHERE id='{$id}'";
+    $sql = "UPDATE cars SET car_brand='{$car_brand}', car_model=
+    '{$car_model}', car_year='{$car_year}', 
+        car_color='{$car_color}', no_of_seats='{$no_of_seats}' 
+        WHERE id='{$id}'";
 
     if (!mysqli_query($conn, $sql)) {
         die(mysqli_error($conn));
