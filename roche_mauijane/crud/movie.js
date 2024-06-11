@@ -6,7 +6,7 @@ const inputGenre = document.querySelector('#genre');
 const inputDirector = document.querySelector('#director');
 const inputReleaseDate = document.querySelector('#release_date');
 
-const endpoint = 'http://localhost/php_file/movie.php';
+const endpoint = 'https://iraya.site/api/movie.php';
 
 async function getMovie() {
   const response = await fetch(endpoint);
